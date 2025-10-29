@@ -48,7 +48,6 @@
     margin: 0 auto 20px auto;
   }
 
-  /* Header */
   header {
     position: relative;
     width: 100%;
@@ -92,7 +91,6 @@
     padding: 50px 20px;
   }
 
-  /* Countdown */
   .countdown-section {
     background: #f8e6ec;
     padding: 50px 20px;
@@ -129,7 +127,6 @@
     color: #555;
   }
 
-  /* Iconos animados */
   .icon {
     width: 216px;
     margin: 0 auto 25px;
@@ -141,7 +138,6 @@
     50%{ transform: scale(1.15); }
   }
 
-  /* Galería */
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -159,7 +155,6 @@
     transform: scale(1.05);
   }
 
-  /* Botones gris oscuro */
   .btn {
     display: inline-block;
     margin-top: 20px;
@@ -173,7 +168,6 @@
   }
   .btn:hover { background: #555; }
 
-  /* Modal */
   .modal {
     position: fixed;
     inset: 0;
@@ -189,13 +183,11 @@
     border-radius: 12px;
   }
 
-  /* Secciones verdes */
   .green-section {
     background: #a6c5b7;
     color: #fff;
   }
 
-  /* Instagram */
   #instagram {
     height: 300px;
     background-size: cover;
@@ -203,7 +195,6 @@
     background-repeat: no-repeat;
   }
 
-  /* Botón música */
   #music-btn {
     position: fixed;
     top: 20px;
@@ -219,7 +210,6 @@
     filter: brightness(1.5) drop-shadow(0 0 10px #f39c12);
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
     h2 { font-size: 2em; }
     h3 { font-size: 1.7em; }
@@ -240,7 +230,7 @@
   <img src="images/logo.png" alt="Nombre Quinceañera" class="logo" id="hero-logo">
 </header>
 
-<!-- Nueva sección con frase -->
+<!-- Frase -->
 <section style="background:#fff;">
   <h2>Los espero para que sean parte de esta gran noche que quedará por siempre en mis recuerdos</h2>
 </section>
@@ -342,7 +332,7 @@
 <!-- Instagram -->
 <section id="instagram" class="parallax" style="background-image:url('images/imagenig.jpg');">
   <img src="images/icono-instagram.svg" alt="Instagram" class="icon">
-  <h2>@isagorlero</h2>
+  <h2><a href="https://www.instagram.com/isagorlero" target="_blank" style="color:#fff; text-decoration:none;">@isagorlero</a></h2>
   <p>¡Preparate para esta gran fiesta!<br>
   Seguime en mi cuenta de Instagram y etiquetame en tus fotos y videos.</p>
 </section>
@@ -384,7 +374,6 @@
 </div>
 
 <script>
-  // Countdown
   const eventDate = new Date("2025-12-06T21:00:00");
   function updateCountdown() {
     const now = new Date();
@@ -401,7 +390,6 @@
   }
   setInterval(updateCountdown, 1000);
 
-  // Lightbox
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   document.querySelectorAll('.gallery img').forEach(img=>{
@@ -412,7 +400,6 @@
   });
   modal.addEventListener('click', ()=>{ modal.style.display='none'; });
 
-  // Parallax suave
   const parallaxElems = document.querySelectorAll('.parallax');
   window.addEventListener('scroll', ()=>{
     parallaxElems.forEach(el=>{
@@ -434,7 +421,6 @@
     }
   });
 
-  // Música control play/pausa
   const music = document.getElementById("bg-music");
   const musicBtn = document.getElementById("music-btn");
   let isPlaying = false;
